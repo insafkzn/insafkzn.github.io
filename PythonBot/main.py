@@ -292,7 +292,7 @@ async def start(message: types.Message):
     await message.answer('Привет, мой друг!', reply_markup=markup)
 
 
-@dp.message_handler(content_types=['web-app-data'])
+@dp.message_handler(content_types=['web_app_data'])
 async def web_app(message: types.Message):
     await message.answer(message.web_app_data.data)
 
