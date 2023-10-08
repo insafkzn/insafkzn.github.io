@@ -288,9 +288,13 @@ async def reply(message: types.Message):
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
     markup = types.ReplyKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton('Открыть веб страницу', web_app=WebAppInfo(url='https://insafkzn.github.io/PythonBot/')))
+    markup.add(types.KeyboardButton('Открыть веб страницу', web_app=WebAppInfo(url='https://insafkzn.github.io/PythonBot/')))
     await message.answer('Привет, мой друг!', reply_markup=markup)
 
+
+@dp.message_handler(content_types=['web-app-data'])
+async def web_app(message: types.Message):
+    await message.answer(message.web_app_data.data)
 
 executor.start_polling(dp) # бесконечное действие программы на aiogram
 #bot.polling(none_stop=True) # та же самая функция bot.infinity_polling()
