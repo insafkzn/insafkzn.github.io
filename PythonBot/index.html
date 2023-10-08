@@ -4,6 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@2--;500&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-bg-color);
+        }
+
+        #main{
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1{
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        img{
+            width: 70px;
+            margin: 30px auto;
+        }
+        p{
+            width: 350px;
+            margin: 0 auto;
+        }
+        button{
+            border: 0;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 60px;
+            width: 200px;
+            font-size: 20px;
+            transition: 0.5s all;
+        }
+        button:hover{
+            background-color: rgb(18, 26, 0);
+        }
+
+    </style>
 </head>
 <body>
     <div id="main">
@@ -12,5 +60,10 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aut eius quas, quisquam consectetur nihil sapiente mollitia similique.</p>
         <button id="buy">Купить</button>
     </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+
+
 </body>
 </html>
