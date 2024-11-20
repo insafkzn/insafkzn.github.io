@@ -39,7 +39,7 @@
     transform: scale(1.1);
 }
 .info h2 {
-    color: #337AB7;
+    color: rgba(231, 117, 91, 0.7);
     font-size: 20px;
     font-weight: normal;
     margin: 0;
@@ -72,7 +72,7 @@
     color: #FFF;
     font-weight: bold;
     text-transform: uppercase; 
-    background: #337AB7;
+    background: rgba(231, 117, 91, 0.7);
     cursor: pointer; 
     border: 2px solid #BFE2FF;
     border-radius: 8px;    
@@ -87,7 +87,7 @@
     position: absolute;
     height: 4px;
     left: 50%;
-    background: #337AB7;
+    background: rgba(231, 117, 91, 0.7);
     bottom: -6px;
     content: "";
     transition: all 280ms ease-in-out;
