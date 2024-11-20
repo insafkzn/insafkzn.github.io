@@ -1,0 +1,68 @@
+.header
+    position: relative
+    min-height: $heigth_header
+    
+nav
+    position: fixed
+    width: 100%
+    height: $heigth_header
+    background: white
+    display: flex
+    justify-content: space-between
+    min-height: 60px
+    align-items: center
+
+.nav
+    &-links
+        position: absolute
+        top: 90px
+        display: flex
+        -webkit-transition: 0.5s ease-in-out
+        -moz-transition: 0.5s ease-in-out
+        -o-transition: 0.5s ease-in-out
+        transition: 0.5s ease-in-out
+        -webkit-transform: scaleY(0)
+        -ms-transform: scaleY(0)
+        transform: scaleY(0)
+        -webkit-transform-origin: 0 0
+        -ms-transform-origin: 0 0
+        transform-origin: 0 0
+        &__active
+            -webkit-transform: scaleY(1)
+            -ms-transform: scaleY(1)
+            transform: scaleY(1)
+
+    &__items
+        display: flex
+        justify-items: center
+        align-items: center
+    &__wrap
+        display: flex
+        justify-content: space-between
+
+.nav-links
+    height: 60
+    width: fit-content
+    border-radius: var(--cornerRad)
+    background-color: white
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2)
+    flex-direction: column
+    justify-content: space-between
+    overflow: hidden
+    animation: closeMenu 300ms ease-in-out forwards
+    a
+        padding: 12px 24px
+        margin: 0 16px
+        color: black
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1)
+        text-decoration: none
+        text-align: center
+        transition: filter 200ms linear 0s
+        &:nth-last-child(1)
+            border-bottom: none
+        &:nth-of-type(1)
+            padding-top: 24px
+        &:hover
+            filter: brightness(200%)
+
+
