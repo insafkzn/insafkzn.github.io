@@ -1,15 +1,16 @@
 .header
     position: relative
-    min-height: $heigth_header
+    min-height: calc( $heigth_header - 15px )
+    transition: all 0.3s
     
 nav
     position: fixed
     width: 100%
-    height: $heigth_header
+    // height: $heigth_header
     background: white
     display: flex
     justify-content: space-between
-    min-height: 60px
+    min-height: $heigth_header
     align-items: center
 
 .nav
@@ -38,7 +39,7 @@ nav
             transition: all 0.3s
             text-decoration: none
             border-right: 2px solid rgba(140, 140, 140, 0.6) 
-            padding-right: 35px 
+            padding-right: 45px 
             &:nth-last-child(-n + 1)
                 border-right: 0px none
                 padding-right: 0px

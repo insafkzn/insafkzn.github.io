@@ -20,14 +20,16 @@ function togglePopup() {
 
 // скролл
 // Template
-// document.addEventListener("DOMContentLoaded", function () {
-//     const header = document.querySelector(".header");
-//     $(window).on("scroll", function () {
-//       if ($(this).scrollTop() > 1) {
-//         header.classList.add("header__scroll");
-//       } else if (
-//         $(this).scrollTop() < 1 ){
-//         header.classList.remove("header__scroll");
-//       }
-//     });
-// });
+document.addEventListener("DOMContentLoaded", function () {
+    // const header = document.querySelector(".header");
+    const nav = document.querySelector("nav");
+    $(window).on("scroll", function () {
+      if ($(this).scrollTop() > 1) {
+        // header.style.minHeight = "55px"; 
+        nav.style.minHeight = "55px";
+      } else {
+        // header.style.minHeight = "70px"; 
+        nav.style.minHeight = "70px";
+      }
+    });
+});
