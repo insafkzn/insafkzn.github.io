@@ -1,1 +1,63 @@
+@media (max-width: 991px)
+    h1
+        font-size: 20px
+        font-weight: 700
+    .nav-links
+        width: 300px
+        &_link
+            font-size: 15px
+            padding-right: 25px
+            &:nth-last-child(-n+1)
+                padding-right: 0px
+    .nav__items
+        &:nth-last-child(-n+1)
+            width: 370px
+    .achievements
+        &__wraper
+            &_item
+                width: 32%
+    
 
+@media (max-width: 776px)
+    .nav-links
+        width: 250px        
+    .achievements
+        &__wraper
+            &_item
+                width: 30%
+            &_title
+                font-size: 20px
+            &_descr
+                font-size: 14px            
+    
+@media (max-width: 575px)
+    .header
+        min-height: 50px
+    nav
+        height: 50px
+    .nav__items
+        &:nth-last-child(-n+1)
+            width: 200px
+            justify-content: end
+            button
+                display: none
+    .promo
+        &__header
+            min-height: 400px
+    .promo__button_wrap
+        display: flex
+        justify-content: center
+    
+    .achievements
+        &__wraper
+            flex-direction: column
+            margin-top: 20px
+            &_item                
+                width: 100%
+                margin: 0 auto
+                margin-top: 20px
+            &_title
+                font-size: 20px
+            &_descr
+                margin-top: 10px
+                font-size: 14px  

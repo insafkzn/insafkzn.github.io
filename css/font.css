@@ -1,13 +1,41 @@
 @font-face {
-    font-family: PTSans;
+    font-family: 'PTSans';
     src: url(../fonts/PT_Sans/PTSans-Regular.ttf);
     font-weight: 300;
     font-style: normal; 
 }
 
 @font-face {
-    font-family: PTSans;
+    font-family: 'PTSans';
     src: url(../fonts/PT_Sans/PTSans-Bold.ttf); 
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url(../fonts/Merriweather/Merriweather-Regular.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url(../fonts/Merriweather/Merriweather-Bold.ttf);
     font-weight: 700;
     font-style: normal;
 }
