@@ -33,3 +33,40 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 });
+
+
+// нажатие на любую другую точку не связанную с меню, она будет закрываться 
+
+// document.addEventListener('mouseover', (e) => {
+//   const sub_link = document.querySelector(".nav-links_link_sub");
+//   const navLinks = document.querySelector(".nav-links__submenu");
+  
+//   // Проверяем, наведен ли курсор на подменю или ссылку "О фонде"
+//   const isHoveringSubLink = e.composedPath().includes(sub_link);
+//   const isHoveringNavLinks = e.composedPath().includes(navLinks);
+//   // console.log(isHoveringSubLink)
+//   // console.log(isHoveringNavLinks)
+//   if (isHoveringSubLink || isHoveringNavLinks) {
+//     document.getElementById('submenu').style.display = 'flex';
+//   } else {
+//     document.getElementById('submenu').style.display = 'none';
+//   }
+// });
+
+const sub_link = document.querySelector(".nav-links_link_sub");
+const navLinks = document.querySelector(".nav-links__submenu");
+
+sub_link.addEventListener('onmouseover', function(){
+  document.querySelector(".nav-links__submenu").style.display = 'flex';
+})
+navLinks.addEventListener('onmouseover', function(){
+  document.getElementById('.nav-links__submenu').style.display = 'flex';
+})
+
+
+// function showSubmenu() { 
+//   document.getElementById('submenu').style.display = 'flex'; 
+// } 
+// function hideSubmenu() { 
+//   document.getElementById('submenu').style.display = 'none'; 
+// }

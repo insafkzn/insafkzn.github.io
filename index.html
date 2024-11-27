@@ -26,13 +26,16 @@
                             <label class="burger" for="burger-checkbox"></label>
                             <div class="nav-links">
                                 <a href="#" class="nav-links_link">Отчеты</a>
-                                <a href="#" class="nav-links_link">О фонде</a>
+                                <a href="#" class="nav-links_link .nav-links_link_sub">О фонде</a>
                                 <!-- здесь будет вылезать список 1.Кто мы 2.Цели и задачи 3.Чем занимается фонд  -->
+                                <div class="nav-links__submenu" id="submenu">
+                                    <a href="#" class="nav-links__submenu_link">Кто мы</a>
+                                    <a href="#" class="nav-links__submenu_link">Цели и задачи</a>
+                                    <a href="#" class="nav-links__submenu_link">Чем мы занимаемся</a>
+                                </div>
                                 <a href="news.html" class="nav-links_link">Новости</a>
-                                
-                                
-                                <!-- <a href="news.html">Новости</a> -->
                             </div>   
+                            
                         </div> 
                     </div>
                     <div class="nav__items">
@@ -53,13 +56,7 @@
         </div>
     </section>
 
-    <section class="promo__button">
-        <div class="container">
-            <div class="promo__button_wrap">
-                <button class="button raise" onclick="togglePopup()">Получить помощь</button>    
-            </div>
-        </div>
-    </section>
+
 
     <section class="achievements">
         <div class="container">
@@ -79,6 +76,14 @@
                         <div class="achievements__wraper_descr">Обращений рассмотрено за 2023 год, оказана благотворительная  помощь ветеранам, работникам АО «Сетевая компания» и сторонним лицам</div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo__button">
+        <div class="container">
+            <div class="promo__button_wrap">
+                <button class="button raise" onclick="togglePopup()">Получить помощь</button>    
             </div>
         </div>
     </section>
