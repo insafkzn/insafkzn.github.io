@@ -53,20 +53,20 @@ document.addEventListener("DOMContentLoaded", function () {
 //   }
 // });
 
-const sub_link = document.querySelector(".nav-links_link_sub");
-const navLinks = document.querySelector(".nav-links__submenu");
+// const sub_link = document.querySelector(".nav-links_link_sub");
+// const navLinks = document.querySelector(".nav-links__submenu");
 
-sub_link.addEventListener('onmouseover', function(){
-  document.querySelector(".nav-links__submenu").style.display = 'flex';
-})
-navLinks.addEventListener('onmouseover', function(){
-  document.getElementById('.nav-links__submenu').style.display = 'flex';
-})
+// sub_link.addEventListener('onmouseover', function(){
+//   document.querySelector(".nav-links__submenu").style.display = 'flex';
+// })
+// navLinks.addEventListener('onmouseover', function(){
+//   document.getElementById('.nav-links__submenu').style.display = 'flex';
+// })
 
 
-// function showSubmenu() { 
-//   document.getElementById('submenu').style.display = 'flex'; 
-// } 
-// function hideSubmenu() { 
-//   document.getElementById('submenu').style.display = 'none'; 
-// }
+function showSubmenu() { 
+  document.getElementById('submenu').style.display = 'flex'; 
+} 
+function hideSubmenu() { 
+  document.getElementById('submenu').style.display = 'none'; 
+}

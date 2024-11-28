@@ -6,11 +6,11 @@
         width: 300px
         &_link
             font-size: 15px
-            padding-right: 25px
+            padding-right: 33px
             &:nth-last-child(-n+1)
                 padding-right: 0px
-        &__submenu
-            left: 16%
+        &__sub
+            left: 15%
             font-size: 15px
             width: 180px
 
@@ -25,7 +25,15 @@
 
 @media (max-width: 776px)
     .nav-links
-        width: 250px        
+        width: 250px    
+        &__sub
+            left: 94%
+            top: 60px
+            font-size: 15px
+            width: 180px
+            &menu
+                margin-top: 0px
+                margin-left: 20px   
     .achievements
         &__wraper
             &_item

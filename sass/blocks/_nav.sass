@@ -30,6 +30,7 @@ nav
         margin: 0 
         list-style-type: none 
         width: 370px
+        position: relative
         &_link
             font-weight: 700 
             font-size: 16px 
@@ -45,13 +46,22 @@ nav
             &:hover,
             &:focus
                 transform: translateY(-0.05em)
-        &__submenu
+            &:nth-child(2)
+                &:hover
+                    & + .nav-links__sub
+                        display: block
+
+                        
+        &__sub
             position: absolute
             display: none
-            margin-top: 50px
-            top: 0px
+            top: 20px
             left: 21%
-            height: 60
+            &:hover
+                display: block
+        &__submenu
+            display: flex
+            margin-top: 25px
             width: 200px
             border-radius: 10px
             background-color: white
@@ -102,11 +112,7 @@ nav
                 -ms-transform: scaleY(1)
                 transform: scaleY(1)
                 
-            &_link
-                border: none
-                &:hover,
-                &:focus
-                    transform: translateY(0em)
+
             
                     
 
@@ -119,7 +125,7 @@ nav
         box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2)
         flex-direction: column
         justify-content: space-between
-        overflow: hidden
+        // overflow: hidden
         animation: closeMenu 300ms ease-in-out forwards
         a
             padding: 12px 24px
@@ -128,14 +134,23 @@ nav
             border-bottom: 2px solid rgba(0, 0, 0, 0.1)
             text-decoration: none
             text-align: center
-            transition: filter 200ms linear 0s
+            // transition: filter 200ms linear 0s
+            // transition: background-color 0.5 ease
             &:nth-last-child(1)
                 border-bottom: none
                 padding: 12px 0px
             &:nth-of-type(1)
                 padding-top: 24px
-            &:hover
-                filter: brightness(200%)
+            // &:hover
+            //     filter: brightness(200%)
+        &_link
+            border: none
+            background-color: white
+            transition: background-color 1 ease
+            &:hover,
+            &:focus
+                background-color: rgb(241, 241, 241)
+                transform: translateY(0em)
 
 
 
