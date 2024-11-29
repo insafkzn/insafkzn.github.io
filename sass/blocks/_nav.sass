@@ -12,6 +12,8 @@ nav
     min-height: $heigth_header
     align-items: center
     transition: all 0.3s
+    z-index: 1
+    border-bottom: 1px solid rgb(241, 241, 241)
 .nav
     &__items
         display: flex
@@ -79,17 +81,23 @@ nav
                 border-bottom: 2px solid rgba(0, 0, 0, 0.1)
                 text-decoration: none
                 text-align: center
-                transition: filter 200ms linear 0s
+                // transition: filter 200ms linear 0s
                 &:nth-last-child(1)
                     border-bottom: none
                     padding: 12px 0px
                 &:nth-of-type(1)
                     padding-top: 24px
-                &:hover
-                    filter: brightness(200%)
+                // &:hover
+                //     filter: brightness(200%)
             &:hover
                 display: flex
-            
+            &_link
+                background-color: white
+                transition: background-color 0.3s ease
+                &:hover,
+                &:focus
+                    color: black
+                    background-color: rgb(244, 244, 244)
                 
         
 
@@ -142,7 +150,7 @@ nav
         &_link
             border: none
             background-color: white
-            transition: background-color 1 ease
+            transition: background-color 0.3s ease
             &:hover,
             &:focus
                 background-color: rgb(241, 241, 241)
