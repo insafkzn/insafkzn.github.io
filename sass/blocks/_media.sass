@@ -45,9 +45,9 @@
     
 @media (max-width: 575px)
     .header
-        min-height: 70px
+        min-height: 55px
     nav
-        height: 70px
+        min-height: 70px
     .nav__items
         &:nth-last-child(-n+1)
             width: 200px
@@ -74,3 +74,70 @@
             &_descr
                 margin-top: 10px
                 font-size: 14px  
+    .nav-links__sub
+        position: static
+        display: flex
+        width: 100%
+        &menu
+            width: 100%
+            margin: 0 auto
+            box-shadow: none
+            a
+                padding: 12px 12px
+                &:nth-of-type(1)
+                    padding-top: 12px
+                &:nth-last-child(1)
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.1)
+    .nav-links
+        &_link_critism
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 30px 
+            height: 30px
+            top: 69px
+            left: 165px
+            border-radius: 100%
+            border: 1px solid rgb(140, 140, 140)
+            &_active 
+                background-color: rgb(180, 180, 180)
+            i
+                font-size: 22px
+                color: rgb(100, 100, 100)
+        &__sub
+            height: 0
+            -webkit-transition: 0.5s ease-in-out
+            -moz-transition: 0.5s ease-in-out
+            -o-transition: 0.5s ease-in-out
+            transition: 0.5s ease-in-out
+            -webkit-transform: scaleY(0)
+            -ms-transform: scaleY(0)
+            transform: scaleY(0)
+            -webkit-transform-origin: 0 0
+            -ms-transform-origin: 0 0
+            transform-origin: 0 0
+            &_active
+                height: 147px
+                -webkit-transform: scaleY(1)
+                -ms-transform: scaleY(1)
+                transform: scaleY(1)
+        &__submenu
+            -webkit-transition: 0.5s ease-in-out
+            -moz-transition: 0.5s ease-in-out
+            -o-transition: 0.5s ease-in-out
+            transition: 0.5s ease-in-out
+            -webkit-transform: scaleY(0)
+            -ms-transform: scaleY(0)
+            transform: scaleY(0)
+            -webkit-transform-origin: 0 0
+            -ms-transform-origin: 0 0
+            transform-origin: 0 0
+            &_active
+                -webkit-transform: scaleY(1)
+                -ms-transform: scaleY(1)
+                transform: scaleY(1)
+
+
+                    
+                    

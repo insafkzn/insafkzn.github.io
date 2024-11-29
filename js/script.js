@@ -64,9 +64,16 @@ document.addEventListener("DOMContentLoaded", function () {
 // })
 
 
-function showSubmenu() { 
-  document.getElementById('submenu').style.display = 'flex'; 
-} 
-function hideSubmenu() { 
-  document.getElementById('submenu').style.display = 'none'; 
-}
+// function showSubmenu() { 
+//   document.getElementById('submenu').style.display = 'flex'; 
+// } 
+// function hideSubmenu() { 
+//   document.getElementById('submenu').style.display = 'none'; 
+// }
+
+// раскрытие меню
+document.querySelector(".nav-links_link_critism").addEventListener("click", () => {
+  document.querySelector(".nav-links_link_critism").classList.toggle("nav-links_link_critism_active");
+  document.querySelector(".nav-links__sub").classList.toggle("nav-links__sub_active");
+  document.querySelector(".nav-links__submenu").classList.toggle("nav-links__submenu_active");
+});

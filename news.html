@@ -16,6 +16,39 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="header">
+        <nav>
+            <div class="container сontainer_between">
+                <div class="nav__wrap">
+                    <div class="nav__items">
+                        <div class="hamburger-menu">                    
+                            <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                            <label class="burger" for="burger-checkbox"></label>
+                            <div class="nav-links">
+                                <a href="#" class="nav-links_link">Отчеты</a>
+                                <a href="#" class="nav-links_link">О фонде</a>
+                                <div class="nav-links__sub">
+                                    <div class="nav-links__submenu" id="submenu">
+                                        <a href="#" class="nav-links__submenu_link">Кто мы</a>
+                                        <a href="#" class="nav-links__submenu_link">Цели и задачи</a>
+                                        <a href="#" class="nav-links__submenu_link">Чем мы занимаемся</a>
+                                    </div>
+                                </div>
+
+                                <a href="news.html" class="nav-links_link">Новости</a>
+                            </div>   
+                            
+                        </div> 
+                    </div>
+                    <div class="nav__items">
+                        <h1>Надежда и опора</h1> 
+                        <button class="button raise" onclick="togglePopup()">Получить помощь</button>    
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
     
     <div class="news">
         <div class="container">
@@ -115,7 +148,44 @@
         </div>
     </div>
 
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>
+                    Председатель Совета Благотворительного фонда «Надежда и опора» - Назарова Наталья Александровна, заместитель генерального директора - директор по экономике и реализации услуг.
+                </p>
+                <p>
+                    Директор Благотворительного фонда «Надежда и опора» - Абдулхаева Венера Ривхатовна<br>
+                    Тел: <a href="tel:+78432918423">(843) 291-84-23</a><br>
+                    E-mail: <a href="mailto:abdulhaevavr@gridcom-rt.ru">abdulhaevavr@gridcom-rt.ru</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Специалисты</h3>
+                <p>
+                    Ведущий специалист по работе с ветеранами - Зябикова Ирина Владимировна<br>
+                    Раб. тел: <a href="tel:+78432918236">(843) 291-82-36</a>
+                </p>
+                <p>
+                    Ведущий специалист по работе с персоналом - Ахметшина Алия Ниловна<br>
+                    Раб. тел: <a href="tel:+78432918557">(843) 291-85-57</a>
+                </p>
+            </div>
+        </div>
+    </footer>
     
+    <!-- форма выбора отправки помощи -->
+    <div id="popupOverlay" class="overlay-container">
+        <div class="popup-box">
+            <form class="form-container">
+                <a href="#" class="form-container__link">Работникам АО «Сетевая компания»</a>
+                <a href="#" class="form-container__link">Ветеранам</a>
+                <a href="#" class="form-container__link">Мобилизованным и добровольцам</a>
+            </form>
+            <i class="fa-regular fa-circle-xmark form-container__close" onclick="togglePopup()"></i>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/script.js"></script>
