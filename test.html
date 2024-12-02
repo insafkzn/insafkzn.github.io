@@ -1,94 +1,125 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="css/font.css">
+    <!-- Иконка сайта -->
+    <link rel="icon" href="icons/star.svg" type="image/x-icon"> 
+    <title>Фонд «Надежды и опоры»</title>
 
-.navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-</style>
+    <!-- Для добавления иконок с fontawesome -->
+    <script src="https://kit.fontawesome.com/c6a6357097.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+    <div class="header">
+        <nav>
+            <div class="container сontainer_between">
+                <div class="nav__wrap">
+                    <div class="nav__items">
+                        <div class="hamburger-menu">                    
+                            <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                            <label class="burger" for="burger-checkbox"></label>
+                            <div class="nav-links">
+                                <a href="#" class="nav-links_link">Отчеты</a>
+                                <a href="#" class="nav-links_link">О фонде</a>
+                                <div class="nav-links__sub">
+                                    <div class="nav-links__submenu" id="submenu">
+                                        <a href="#" class="nav-links__submenu_link">Кто мы</a>
+                                        <a href="#" class="nav-links__submenu_link">Цели и задачи</a>
+                                        <a href="#" class="nav-links__submenu_link">Чем мы занимаемся</a>
+                                    </div>
+                                </div>
+                                <div class="nav-links_link_critism"><i class="fa-duotone fa-solid fa-caret-down"></i></div>
+                                <a href="news.html" class="nav-links_link">Новости</a>
+                            </div>   
+                            
+                        </div> 
+                    </div>
+                    <div class="nav__items">
+                        <a href="index.html" class="header__link">Надежда и опора</a> 
+                        <button class="button raise" onclick="togglePopup()">Получить помощь</button>    
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
-  </div> 
-</div>
 
-<h3>Dropdown Menu inside a Navigation Bar</h3>
-<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+    <section class="promo promo_about">
+        <div class="container">
+            <div class="promo__header promo__header_about">
+                <h1>О фонде</h1>
+            </div>
+        </div>
+    </section>
 
+
+
+    <section class="promo__button">
+        <div class="container">
+            <div class="promo__button_wrap">
+                <button class="button raise" onclick="togglePopup()">Получить помощь</button>    
+            </div>
+        </div>
+    </section>
+
+    <section class="about_fond">
+        <div class="container">
+            <div class="about_fond__wrap about_fond__wrap_mb">
+                <div class="about_fond__wraper_img"><img src="https://www.gov.kz/uploads/2024/5/2/e461591d3d2c79d0effffe72314b31bf_original.112095.jpg" alt="images_fond"></div>
+                <div class="about_fond__wraper__text">
+                    <div class="about_fond__wraper_descr about_fond__wraper_descr_mt">Благотворительный некоммерческий Фонд «Надежда и Опора» изначально был создан для поддержки ветеранского движения. Фонд зарегистрирован 27 июля 2015 года в Управлении Министерства юстиции Российской Федерации по Республике Татарстан.</div>
+                </div>
+            </div>
+            <div class="about_fond__wraper_descr about_fond__wraper_descr_mt_10">За весь период работы Фонда по состоянию на 1 января 2023 года рассмотрено 2555 обращений (по протоколам об оказании благотворительной помощи ветеранам и работникам Компании). Всего на благотворительные цели направлено свыше 170,6 млн рублей.</div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>
+                    Председатель Совета Благотворительного фонда «Надежда и опора» - Назарова Наталья Александровна, заместитель генерального директора - директор по экономике и реализации услуг.
+                </p>
+                <p>
+                    Директор Благотворительного фонда «Надежда и опора» - Абдулхаева Венера Ривхатовна<br>
+                    Тел: <a href="tel:+78432918423">(843) 291-84-23</a><br>
+                    E-mail: <a href="mailto:abdulhaevavr@gridcom-rt.ru">abdulhaevavr@gridcom-rt.ru</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Специалисты</h3>
+                <p>
+                    Ведущий специалист по работе с ветеранами - Зябикова Ирина Владимировна<br>
+                    Раб. тел: <a href="tel:+78432918236">(843) 291-82-36</a>
+                </p>
+                <p>
+                    Ведущий специалист по работе с персоналом - Ахметшина Алия Ниловна<br>
+                    Раб. тел: <a href="tel:+78432918557">(843) 291-85-57</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- форма выбора отправки помощи -->
+    <div id="popupOverlay" class="overlay-container">
+        <div class="popup-box">
+            <form class="form-container">
+                <a href="#" class="form-container__link">Работникам АО «Сетевая компания»</a>
+                <a href="#" class="form-container__link">Ветеранам</a>
+                <a href="#" class="form-container__link">Мобилизованным и добровольцам</a>
+            </form>
+            <i class="fa-regular fa-circle-xmark form-container__close" onclick="togglePopup()"></i>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
