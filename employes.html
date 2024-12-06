@@ -57,9 +57,16 @@
             </div>
         </div>
     </section>
+    <section class="promo__button">
+        <div class="container">
+            <div class="promo__button_wrap">
+                <button class="button raise" onclick="togglePopup()">Получить помощь</button>    
+            </div>
+        </div>
+    </section>
 
     <div class="files">
-        <div class="container">
+        <div class="container container_width">
             <h2 class="files__header">Благотворительная программа по работникам АО СК</h2>
             <div class="files__wrap"> 
                 <a class="files__wrap_link" href="files/employes/Презентация_Благпрограмма_по_работникам_СК_2024.pdf" target="_blank"><i class="fa-solid fa-download"></i></a>
@@ -112,8 +119,8 @@
     <div id="popupOverlay" class="overlay-container">
         <div class="popup-box">
             <form class="form-container">
-                <a href="#" class="form-container__link">Работникам АО «Сетевая компания»</a>
-                <a href="#" class="form-container__link">Ветеранам</a>
+                <a href="employes.html" class="form-container__link">Работникам АО «Сетевая компания»</a>
+                <a href="veteran.html" class="form-container__link">Ветеранам</a>
                 <a href="#" class="form-container__link">Мобилизованным и добровольцам</a>
             </form>
             <i class="fa-regular fa-circle-xmark form-container__close" onclick="togglePopup()"></i>

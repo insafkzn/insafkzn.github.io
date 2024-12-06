@@ -5,6 +5,8 @@
             &er
                 &__text
                     padding: 0 100px 0 100px
+    .files__wrap
+        grid-template-columns: repeat(3, 1fr)
 
 @media (max-width: 1200px) 
     .about_fond
@@ -50,7 +52,9 @@
                     font-size: 17px 
         &__btn
             margin-left: 90px
-        
+    .files__wrap
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr))
+
     
 
 @media (max-width: 776px)
@@ -90,7 +94,10 @@
                     font-size: 17px 
         &__btn
             display: block
-            margin: 15px auto      
+            margin: 15px auto   
+    .files__wrap_link
+        display: block
+        margin: 0 auto  
     
 @media (max-width: 575px)
     .header
