@@ -1,0 +1,59 @@
+.article
+    min-height: 500px
+    &__wrap
+        &__item
+            display: flex
+            justify-content: space-between
+            margin-top: 30px
+            background-color: white
+            
+
+        &__images
+            width: 300px
+            margin-left: 100px
+            
+            img
+                width: 100%
+            &_ruch
+                min-height: 100px
+                &_item
+                    height: 100%
+                    padding: 20px
+                    background-color: rgb(240, 240, 240)
+                    position: relative
+                    &_table
+                        height: 100%
+                        border: dotted 3px gray
+                    &_title
+                        position: absolute
+                        z-index: 1
+                        background: rgb(240, 240, 240)
+                        top: 2px
+                        left: 150px
+                        font-weight: 700
+                        font-size: 20px
+                        width: 103px
+                        line-height: 16px
+                        text-align: center
+            
+
+        &__text
+            width: 500px
+            margin-right: 150px
+            &_question
+                font-weight: 700
+        
+        &__item__obr
+            .article__wrap__images
+                margin-right: 100px
+                margin-left: 0
+            .article__wrap__text
+                width: 550px
+                margin-left: 100px
+                margin-right: 0
+            .article__wrap__images_people
+                width: 450px
+                margin-top: 30px  
+
+.article__wrap__images_ruch
+    width: 400px
