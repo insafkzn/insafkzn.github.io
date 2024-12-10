@@ -15,6 +15,24 @@
             &er
                 &__text
                     padding: 0 20px 0 50px
+    .article__wrap
+        &__images
+            margin-left: 0
+    .article__wrap__item
+        &:nth-child(1n)
+            .article__wrap__images
+                margin-left: 0
+            .article__wrap__text
+                padding-left: 50px
+        &:nth-of-type(2n+1)
+            .article__wrap__images
+                margin-right: 0
+            .article__wrap__text
+                padding: 0 50px 0 0
+
+            
+            
+
 
 @media (max-width: 991px)
     h1
@@ -59,9 +77,28 @@
         width: 120px
         &_width
             width: 350px
-    
+    .article__wrap__item
+        flex-flow: column
+        .article__wrap__text
+            padding: 0
+            margin: 0
+            width: 100%
+        &:nth-of-type(1n)
+            .article__wrap__images
+                display: block
+                margin: 0 auto
+            .article__wrap__text
+                padding: 0
+                margin: 0
+        &:nth-of-type(2n+1)
+            .article__wrap__images
+                order: 1
+            .article__wrap__text
+                order: 2
 
 @media (max-width: 776px)
+    h2
+        font-size: 28px
     .nav-links
         width: 250px    
         &__sub
