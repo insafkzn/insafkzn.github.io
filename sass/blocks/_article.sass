@@ -1,29 +1,34 @@
 .article
     min-height: 500px
     &__wrap
+        &_descr
+            font-size: 18px
         &__item
             display: flex
             justify-content: space-between
             margin-top: 30px
             background-color: white
-            
+            &:nth-of-type(2)
+                .article__wrap__images
+                    margin-left: 100px
+                
 
         &__images
             width: 300px
-            margin-left: 100px
             
             img
                 width: 100%
             &_ruch
                 min-height: 100px
                 &_item
-                    height: 100%
+                    min-height: 100px
                     padding: 20px
                     background-color: rgb(240, 240, 240)
                     position: relative
                     &_table
                         height: 100%
                         border: dotted 3px gray
+                        padding: 35px 10px 30px 10px
                     &_title
                         position: absolute
                         z-index: 1
@@ -38,8 +43,10 @@
             
 
         &__text
-            width: 500px
-            margin-right: 150px
+            width: 650px
+            // margin-right: 150px
+            margin-top: 10px
+            font-size: 18px
             &_question
                 font-weight: 700
         
@@ -48,12 +55,47 @@
                 margin-right: 100px
                 margin-left: 0
             .article__wrap__text
-                width: 550px
-                margin-left: 100px
+                width: 650px
+                // margin-left: 100px
                 margin-right: 0
             .article__wrap__images_people
                 width: 450px
+                margin: 0 auto
                 margin-top: 30px  
+
 
 .article__wrap__images_ruch
     width: 400px
+
+.article__btn
+    display: block
+    margin: 0 auto
+    margin-top: 20px
+
+
+.article__table__item
+    display: flex
+    justify-content: center
+    position: relative
+    padding-right: 50px
+    align-items: center
+    margin-top: 15px
+    &_img
+        width: 122px
+        img
+            width: 100%
+    &_text
+        width: 143px
+        margin-left: 20px
+        // margin-right: 20px
+        font-weight: 300
+        font-size: 19px
+
+    &_count
+        position: absolute
+        bottom: -15px
+        right: 0
+        &_chislo
+            font-weight: 700
+            font-size: 32px
+            line-height: 30px
