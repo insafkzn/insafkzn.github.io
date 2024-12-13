@@ -29,7 +29,15 @@
                 margin-right: 0
             .article__wrap__text
                 padding: 0 50px 0 0
-
+    
+    .footer
+        &__links
+            display: flex
+            justify-content: space-between
+            &__wrap
+                margin-left: 0px
+            &_btn
+                margin-right: 0px
             
             
 
@@ -95,6 +103,15 @@
                 order: 1
             .article__wrap__text
                 order: 2
+    .footer
+        &__links
+            display: flex
+            justify-content: space-between
+            &__wrap
+                width: 60%
+                margin-left: 0px
+            &_btn
+                margin-right: 0px
 
 @media (max-width: 776px)
     h2
@@ -102,89 +119,19 @@
     .nav-links
         width: 250px    
         &__sub
-            left: 94%
-            top: 60px
-            font-size: 15px
-            width: 180px
+            position: static
+            display: flex
+            width: 100%
             &menu
-                margin-top: 0px
-                margin-left: 20px   
-    .achievements
-        &__wraper
-            &_item
-                width: 30%
-            &_title
-                font-size: 20px
-            &_descr
-                font-size: 14px   
-    .about_fond
-        &__wrap
-            padding-left: 0px
-            display: block
-            &er
-                &_img
-                    display: flex
-                    justify-content: center
-                    img
-                        width: 300px
-                &__text
-                    padding-left: 20px
-                    
-                &_descr
-                    margin-top: 20px
-                    font-size: 17px 
-        &__btn
-            display: block
-            margin: 15px auto   
-    .files__wrap_link
-        display: block
-        margin: 0 auto  
-    
-@media (max-width: 575px)
-    .header
-        min-height: 55px
-    nav
-        min-height: 70px
-    .nav__items
-        &:nth-last-child(-n+1)
-            width: 200px
-            justify-content: end
-            button
-                display: none
-    .promo
-        &__header
-            min-height: 400px
-    .promo__button_wrap
-        display: flex
-        justify-content: center
-    
-    .achievements
-        &__wraper
-            flex-direction: column
-            margin-top: 20px
-            &_item                
                 width: 100%
                 margin: 0 auto
-                margin-top: 20px
-            &_title
-                font-size: 20px
-            &_descr
-                margin-top: 10px
-                font-size: 14px  
-    .nav-links__sub
-        position: static
-        display: flex
-        width: 100%
-        &menu
-            width: 100%
-            margin: 0 auto
-            box-shadow: none
-            a
-                padding: 12px 12px
-                &:nth-of-type(1)
-                    padding-top: 12px
-                &:nth-last-child(1)
-                    border-bottom: 2px solid rgba(0, 0, 0, 0.1)
+                box-shadow: none
+                a
+                    padding: 12px 12px
+                    &:nth-of-type(1)
+                        padding-top: 12px
+                    &:nth-last-child(1)
+                        border-bottom: 2px solid rgba(0, 0, 0, 0.1) 
     .nav-links
         &_link_critism
             position: absolute
@@ -234,7 +181,104 @@
                 -webkit-transform: scaleY(1)
                 -ms-transform: scaleY(1)
                 transform: scaleY(1)
-
-
+    .achievements
+        &__wraper
+            &_item
+                width: 30%
+            &_title
+                font-size: 20px
+            &_descr
+                font-size: 14px   
+    .about_fond
+        &__wrap
+            padding-left: 0px
+            display: block
+            &er
+                &_img
+                    display: flex
+                    justify-content: center
+                    img
+                        width: 300px
+                &__text
+                    padding-left: 20px
                     
+                &_descr
+                    margin-top: 20px
+                    font-size: 17px 
+        &__btn
+            display: block
+            margin: 15px auto   
+    .files__wrap_link
+        display: block
+        margin: 0 auto  
+    .footer
+        &__links
+            flex-direction: column
+            &__wrap
+                width: 100%
+                margin-left: 0px
+            &_btn
+                margin-right: 0px
+                margin: 0 auto
+                margin-top: 10px
+        &__contacts
+            flex-direction: column
+            margin-top: 40px
+            .footer-section
+                width: 100%
+                h3
+                    font-family: Merriweather
+                    color: rgb(100, 100, 100)
+                p
+                    font-size: 20px
+    
+@media (max-width: 575px)
+    .header
+        min-height: 55px
+    nav
+        min-height: 70px
+    .nav__items
+        &:nth-last-child(-n+1)
+            width: 200px
+            justify-content: end
+            button
+                display: none
+    .promo
+        &__header
+            min-height: 400px
+    .promo__button_wrap
+        display: flex
+        justify-content: center
+    
+    .achievements
+        &__wraper
+            flex-direction: column
+            margin-top: 20px
+            &_item                
+                width: 100%
+                margin: 0 auto
+                margin-top: 20px
+            &_title
+                font-size: 20px
+            &_descr
+                margin-top: 10px
+                font-size: 14px  
+    .footer
+        &_link
+            font-size: 22px
+        &__contacts
+            flex-direction: column
+            margin-top: 40px
+            .footer-section
+                width: 100%
+                h3
+                    font-family: Merriweather
+                    color: rgb(100, 100, 100)
+                p
+                    font-size: 18px
+    .article__wrap__images_ruch_item
+        width: 380px
+    .article__wrap__images_people
+        img
+            width: 380px
                     

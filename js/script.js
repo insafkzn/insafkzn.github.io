@@ -21,15 +21,15 @@ function togglePopup() {
 // скролл
 // Template
 document.addEventListener("DOMContentLoaded", function () {
-    // const header = document.querySelector(".header");
+    const header = document.querySelector(".header");
     const nav = document.querySelector("nav");
     $(window).on("scroll", function () {
       if ($(this).scrollTop() > 1) {
-        // header.style.minHeight = "55px"; 
         nav.style.minHeight = "55px";
+        nav.style.backgroundColor = "rgb(240, 240, 240)"
       } else {
-        // header.style.minHeight = "70px"; 
         nav.style.minHeight = "70px";
+        nav.style.backgroundColor = "white"
       }
     });
 });
