@@ -29,7 +29,8 @@
                 margin-right: 0
             .article__wrap__text
                 padding: 0 50px 0 0
-    
+    .achievements__wraper_title
+        font-size: 32px
     .footer
         &__links
             display: flex
@@ -60,11 +61,19 @@
 
     .nav__items
         &:nth-last-child(-n+1)
-            width: 370px
+            width: 360px
+            img 
+                margin-right: 5px
+            button
+                width: 155px
+        
+        
     .achievements
         &__wraper
             &_item
                 width: 32%
+            &_title
+                font-size: 28px
     .about_fond
         &__wrap
             padding-left: 0px
@@ -112,6 +121,12 @@
                 margin-left: 0px
             &_btn
                 margin-right: 0px
+    button
+        font-size: 13px
+    .header__link
+        font-size: 19px
+
+
 
 @media (max-width: 776px)
     h2
@@ -122,6 +137,8 @@
             position: static
             display: flex
             width: 100%
+            &:hover
+                display: flex
             &menu
                 width: 100%
                 margin: 0 auto
@@ -200,8 +217,7 @@
                     img
                         width: 300px
                 &__text
-                    padding-left: 20px
-                    
+                    padding: 0px
                 &_descr
                     margin-top: 20px
                     font-size: 17px 
