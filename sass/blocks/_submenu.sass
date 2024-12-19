@@ -1,0 +1,38 @@
+.submenu-tabs
+    &__wrap
+        ul
+            list-style: none
+    &__list
+        display: flex
+        overflow-x: scroll
+        white-space: nowrap
+        scrollbar-width: thin
+        scrollbar-color: $beige
+        margin: 35px 0 15px 0
+    &__item
+        margin-right: 70px
+        &-link
+            text-decoration: none
+            color: rgb(100, 100, 100)
+            font-family: Merriweather
+            font-weight: 700
+            font-size: 25px
+            transition: all 0.3s
+            position: relative
+            &:after
+                content: ""
+                position: absolute
+                bottom: 0
+                display: block
+                width: 0
+                height: 2px
+                background-color: $beige
+                transition: .3s
+                left: 50%
+                transform: translate(-50%)
+            &:hover
+                color: $beige
+                &:after
+                    width: 100%
+            &_active
+                color: $beige
