@@ -62,7 +62,38 @@
             -moz-transform: scale(1.03)
             -webkit-transform: scale(1.03)
             -o-transform: scale(1.03)
-
+    &_block
+        margin-bottom: 20px
+    
+    label
+        display: block
+        text-align: left
+        margin-bottom: 10px
+        font-size: 20px
+        font-weight: 700
+    
+    input, textarea
+        width: 100%
+        padding: 12px 15px
+        border: 1px solid #ddd
+        border-radius: 20px
+        font-size: 18px
+        transition: border-color 0.3 ease
+        outline: none
+        &:focus
+            border-color: #aaa
+        &::placeholder
+            font-size: 18px
+    textarea
+        height: 120px
+        resize: none
+    &_mg0
+        margin: 0
+        margin-top: 10px
+        width: 100%
+    &_btn
+        width: 150px
+        margin: 0 auto
 
 .form-container__close
     position: absolute

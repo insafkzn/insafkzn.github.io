@@ -7,7 +7,7 @@
    
     <link rel="stylesheet" href="css/font.css">
     <!-- Иконка сайта -->
-    <link rel="icon" href="icons/star.svg" type="image/x-icon"> 
+    <link rel="icon" href="images/logo.svg" type="image/x-icon"> 
     <title>Фонд «Надежды и опоры»</title>
 
     <!-- Для добавления иконок с fontawesome -->
@@ -104,7 +104,7 @@
                     <a href="news.html" class="footer_link">Новости</a>
                 </div>
                 <div class="footer__links_btn">
-                    <button class="footer__btn">Обратная связь</button>
+                    <button class="footer__btn" onclick="togglePopup_obr()">Обратная связь</button>
                 </div>
             </div>
             <div class="footer__line"></div>
@@ -145,6 +145,29 @@
         </div>
     </div>
 
+    <!-- форма обратной связи -->
+    <div id="popupOverlay__obr" class="overlay-container">
+        <div class="popup-box">
+            <form class="form-container form-container_mg0">
+                <div class="form-container_block">
+                    <label for="">Ваш телефон</label>
+                    <input type="tel" placeholder="+7 (999) 999-99-99">
+                </div>
+                <div class="form-container_block">
+                    <label for="">Ваш E-mail</label>
+                    <input type="email" placeholder="example@mail.ru">
+                </div>
+                <div class="form-container_block">
+                    <label for="">Вопрос</label>
+                    <textarea name="" id="" placeholder="Опишите свой вопрос"></textarea>
+                </div>
+                <form action="">
+                    <button class="form-container_btn">Отправить</button>
+                </form>
+            </form>
+            <i class="fa-regular fa-circle-xmark form-container__close" onclick="togglePopup_obr()"></i>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/script.js"></script>
