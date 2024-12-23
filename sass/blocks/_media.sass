@@ -164,12 +164,13 @@
             top: 69px
             left: 165px
             border-radius: 100%
-            border: 1px solid rgb(140, 140, 140)
+            border: 1px solid $beige
             &_active 
                 background-color: rgb(180, 180, 180)
             i
                 font-size: 22px
-                color: rgb(100, 100, 100)
+                // color: rgb(100, 100, 100)
+                color: $beige
         &__sub
             height: 0
             -webkit-transition: 0.5s ease-in-out
@@ -263,6 +264,13 @@
                 font-size: 22px
             &_descr
                 font-size: 18px
+    .submenu-tabs
+        &__list
+            margin: 35px 0 15px 0
+        &__item
+            margin-right: 40px
+            &-link
+                font-size: 21px
     
 @media (max-width: 575px)
     .header
