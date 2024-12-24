@@ -40,12 +40,12 @@
             &_btn
                 margin-right: 0px
             
-            
+    
 
 
 @media (max-width: 991px)
     h1
-        font-size: 20px
+        font-size: 26px
         font-weight: 700
     .nav-links
         width: 300px
@@ -74,6 +74,8 @@
                 width: 32%
             &_title
                 font-size: 28px
+            &_descr
+                font-size: 18px
     .about_fond
         &__wrap
             padding-left: 0px
@@ -91,9 +93,12 @@
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr))
 
     .promo__header_title
-        width: 120px
+        margin-top: 10px
+        width: 135px
         &_width
-            width: 350px
+            width: 360px
+        &_goals
+            width: 230px
     .article__wrap__item
         flex-flow: column
         .article__wrap__text
@@ -130,12 +135,49 @@
         min-height: 50px
         &__wrap
             padding: 20px 0
+            &_title
+                font-size: 24px
+            &_descr
+                font-size: 18px
     .raise
         font-size: 12px
+    
+    h1
+        font-size: 26px
+    h2
+        font-size: 24px
+    .about_fond
+        &__wrap
+            &er
+                &_descr
+                    font-size: 18px
+    .footer
+        &_link
+            font-size: 24px
+        &__links
+            flex-direction: column
+            &__wrap
+                width: 100%
+                margin-left: 0px
+            &_btn
+                margin-right: 0px
+                margin: 0 auto
+                margin-top: 10px
+        &__contacts
+            flex-direction: column
+            margin-top: 40px
+            .footer-section
+                width: 100%
+                h3
+                    // font-family: Merriweather
+                    color: rgb(100, 100, 100)
+                    font-size: 24px
+                p
+                    font-size: 18px
 
 @media (max-width: 776px)
-    h2
-        font-size: 28px
+    .achievements__wraper
+        margin-top: 30px
     .nav-links
         width: 250px    
         &__sub
@@ -169,7 +211,7 @@
             &_active 
                 background-color: rgb(180, 180, 180)
             i
-                font-size: 22px
+                font-size: 24px
                 // color: rgb(100, 100, 100)
                 color: $beige
         &__sub
@@ -226,33 +268,32 @@
                     padding: 0px
                 &_descr
                     margin-top: 20px
-                    font-size: 17px 
         &__btn
             display: block
             margin: 15px auto   
     .files__wrap_link
         display: block
         margin: 0 auto  
-    .footer
-        &__links
-            flex-direction: column
-            &__wrap
-                width: 100%
-                margin-left: 0px
-            &_btn
-                margin-right: 0px
-                margin: 0 auto
-                margin-top: 10px
-        &__contacts
-            flex-direction: column
-            margin-top: 40px
-            .footer-section
-                width: 100%
-                h3
-                    font-family: Merriweather
-                    color: rgb(100, 100, 100)
-                p
-                    font-size: 20px
+    // .footer
+    //     &__links
+    //         flex-direction: column
+    //         &__wrap
+    //             width: 100%
+    //             margin-left: 0px
+    //         &_btn
+    //             margin-right: 0px
+    //             margin: 0 auto
+    //             margin-top: 10px
+    //     &__contacts
+    //         flex-direction: column
+    //         margin-top: 40px
+    //         .footer-section
+    //             width: 100%
+    //             h3
+    //                 font-family: Merriweather
+    //                 color: rgb(100, 100, 100)
+    //             p
+    //                 font-size: 20px
 
     
     .admins
@@ -303,10 +344,10 @@
                 font-size: 20px
             &_descr
                 margin-top: 10px
-                font-size: 14px  
+                font-size: 18px  
     .footer
         &_link
-            font-size: 22px
+            font-size: 24px
         &__contacts
             flex-direction: column
             margin-top: 40px
