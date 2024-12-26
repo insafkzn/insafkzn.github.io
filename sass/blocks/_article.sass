@@ -3,20 +3,13 @@
     transition: all 0.3s
     &__wrap
         &_descr
-            font-size: 20px
+            font-size: $lit_font
             text-align: justify
-        &__item
-            display: flex
-            justify-content: space-between
-            margin-top: 30px
-            background-color: white
-            &:nth-of-type(2)
-                .article__wrap__images
-                    margin-left: 100px
+
                 
 
         &__images
-            width: 300px
+            width: 350px
             img
                 width: 100%
             &_ruch
@@ -37,33 +30,48 @@
                         top: 2px
                         left: 150px
                         font-weight: 700
-                        font-size: 20px
+                        font-size: $lit_font
                         width: 103px
                         line-height: 16px
                         text-align: center
-            
+        &__item
+            display: flex
+            justify-content: space-between
+            margin-top: 30px
+            background-color: white
+            &:nth-of-type(2)
+                .article__wrap__images
+                    margin-right: 100px    
+                    align-items: center
+                    margin-top: 10px
+            &:nth-of-type(4)
+                .article__wrap__text
+                    padding-left: 80px
+                
+                        
 
         &__text
             width: 100%
             // margin-right: 150px
             margin-top: 10px
-            font-size: 18px
+            font-size: $lit_font
             text-align: justify
             &_item
                 text-indent: 30px
                 margin-top: 10px
-                font-size: 20px
+                font-size: $lit_font
             &_question
                 font-weight: 700
         
         &__item__obr
             .article__wrap__images
-                margin-right: 100px
-                margin-left: 0
-            .article__wrap__text
-                width: 650px
+                margin-right: 0px
                 // margin-left: 100px
-                margin-right: 0
+            .article__wrap__text
+                width: 100%
+                margin-right: 80px
+                // margin-left: 100px
+                // padding-right: 100px
             .article__wrap__images_people
                 width: 450px
                 margin: 0 auto
@@ -95,7 +103,7 @@
         margin-left: 20px
         // margin-right: 20px
         font-weight: 300
-        font-size: 19px
+        font-size: $lit_font
 
     &_count
         position: absolute
@@ -103,5 +111,5 @@
         right: 0
         &_chislo
             font-weight: 700
-            font-size: 32px
+            font-size: $mid_font
             line-height: 30px

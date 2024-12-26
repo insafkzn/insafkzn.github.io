@@ -1,3 +1,5 @@
+
+
 @media (max-width: 1400px) 
     .about_fond
         &__wrap
@@ -30,7 +32,7 @@
             .article__wrap__text
                 padding: 0 50px 0 0
     .achievements__wraper_title
-        font-size: 32px
+        font-size: $mid_font
     .footer
         &__links
             display: flex
@@ -44,19 +46,22 @@
 
 
 @media (max-width: 991px)
+    $big_font: 26px
+    $mid_font: 20px
+    $lit_font: 16px
     h1
-        font-size: 26px
+        font-size: $big_font
         font-weight: 700
     .nav-links
         width: 300px
         &_link
-            font-size: 15px
+            font-size: $lit_font
             padding-right: 33px
             &:nth-last-child(-n+1)
                 padding-right: 0px
         &__sub
             left: 15%
-            font-size: 15px
+            font-size: calc( $lit_font - 1px )
             width: 180px
 
     .nav__items
@@ -73,9 +78,9 @@
             &_item
                 width: 32%
             &_title
-                font-size: 28px
+                font-size: $big_font
             &_descr
-                font-size: 18px
+                font-size: $lit_font
     .about_fond
         &__wrap
             padding-left: 0px
@@ -86,7 +91,7 @@
                 &__text
                     padding-left: 20px
                 &_descr
-                    font-size: 17px 
+                    font-size: $lit_font
         &__btn
             margin-left: 90px
     .files__wrap
@@ -126,34 +131,32 @@
                 margin-left: 0px
             &_btn
                 margin-right: 0px
-    button
-        font-size: 13px
+
     .header__link
-        font-size: 19px
+        font-size: $lit_font
 
     .admins
         min-height: 50px
         &__wrap
             padding: 20px 0
             &_title
-                font-size: 24px
+                font-size: $big_font
             &_descr
-                font-size: 18px
-    .raise
-        font-size: 12px
+                font-size: $lit_font
+
     
-    h1
-        font-size: 26px
+    .grid
+        h2
+            font-size: $mid_font
+    .news
+        h2
+            font-size: $big_font
     h2
-        font-size: 24px
-    .about_fond
-        &__wrap
-            &er
-                &_descr
-                    font-size: 18px
+        font-size: $big_font
+
     .footer
         &_link
-            font-size: 24px
+            font-size: $big_font
         &__links
             flex-direction: column
             &__wrap
@@ -171,11 +174,14 @@
                 h3
                     // font-family: Merriweather
                     color: rgb(100, 100, 100)
-                    font-size: 24px
+                    font-size: $big_font
                 p
-                    font-size: 18px
+                    font-size: $mid_font
 
 @media (max-width: 776px)
+    $big_font: 26px
+    $mid_font: 20px
+    $lit_font: 16px
     .achievements__wraper
         margin-top: 30px
     .nav-links
@@ -211,7 +217,7 @@
             &_active 
                 background-color: rgb(180, 180, 180)
             i
-                font-size: 24px
+                // font-size: 24px
                 // color: rgb(100, 100, 100)
                 color: $beige
         &__sub
@@ -248,12 +254,18 @@
                 transform: scaleY(1)
     .achievements
         &__wraper
-            &_item
-                width: 30%
+            flex-direction: column
+            margin-top: 20px
+            &_item                
+                width: 100%
+                margin: 0 auto
+                margin-top: 20px
             &_title
-                font-size: 20px
+                font-size: $big_font
             &_descr
-                font-size: 14px   
+                margin-top: 10px
+                font-size: $mid_font   
+
     .about_fond
         &__wrap
             padding-left: 0px
@@ -303,18 +315,21 @@
             &_text
                 width: 50%
             &_title
-                font-size: 22px
+                font-size: $mid_font
             &_descr
-                font-size: 18px
+                font-size: $lit_font
     .submenu-tabs
         &__list
             margin: 35px 0 15px 0
         &__item
             margin-right: 40px
             &-link
-                font-size: 21px
+                font-size: $mid_font
     
 @media (max-width: 575px)
+    $big_font: 26px
+    $mid_font: 20px
+    $lit_font: 16px
     .header
         min-height: 55px
     nav
@@ -332,32 +347,17 @@
         display: flex
         justify-content: center
     
-    .achievements
-        &__wraper
-            flex-direction: column
-            margin-top: 20px
-            &_item                
-                width: 100%
-                margin: 0 auto
-                margin-top: 20px
-            &_title
-                font-size: 20px
-            &_descr
-                margin-top: 10px
-                font-size: 18px  
+
     .footer
         &_link
-            font-size: 24px
+            font-size: $big_font
         &__contacts
             flex-direction: column
             margin-top: 40px
             .footer-section
                 width: 100%
-                h3
-                    font-family: Merriweather
-                    color: rgb(100, 100, 100)
-                p
-                    font-size: 18px
+                
+
     .article__wrap__images_ruch_item
         width: 380px
     .article__wrap__images_people
@@ -376,9 +376,7 @@
                 width: 100%
             &_title
                 margin-top: 10px
-                font-size: 22px
+                // font-size: 22px
             &_descr
-                font-size: 18px
+                // font-size: 18px
                 padding-bottom: 10px
-    .raise
-        font-size: 14px
