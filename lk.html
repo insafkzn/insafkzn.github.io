@@ -14,7 +14,85 @@
     <script src="https://kit.fontawesome.com/c6a6357097.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="css/style.css">
-</head> 
+    <style>
+        /* Стили для переключения вкладок */
+        .application {
+        position: relative;
+        min-height: 400px;
+        overflow: hidden;
+        }
+
+        .application__content {
+        position: relative;
+        transition: all 0.3s ease;
+        }
+
+        .application__list,
+        .application__form {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(20px);
+        visibility: hidden;
+        transition: all 0.3s ease;
+        }
+
+        .application__list.active,
+        .application__form.active {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        }
+
+        /* Стили карточек заявок */
+        .application-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+        }
+
+        .application-card:hover {
+        transform: translateY(-3px);
+        }
+
+        /* Стили формы */
+        .application-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+        margin-bottom: 20px;
+        }
+
+        .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        }
+
+        .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        }
+
+        /* Активная кнопка */
+        .button__active {
+        background: #2c3e50;
+        color: #fff;
+        }
+    </style>
+</head>
 <body>
     <div class="header">
         <nav>
@@ -50,47 +128,99 @@
         </nav>
     </div>
 
-
-    <section class="promo" style="background: url('https://gridcom-rt.ru/upload/iblock/797/797bf713e340b9b3f83065bd8f103596.jpg') center center/cover no-repeat;">
+    <section class="promo" style="background: url(./images/bg/bg3.png) center center/ cover no-repeat;">
         <div class="container">
             <div class="promo__header">
-                <div class="promo__header_title promo__header_title_width">
-                    <h1 style="color: aliceblue;">документы для работников АО «Сетевая компания»
-                    </h1>
-                </div>    
-            </div>
-        </div>
-    </section>
-    <section class="promo__button">
-        <div class="container">
-            <div class="promo__button_wrap">
-                <button class="button raise" onclick="togglePopup()">Получить помощь</button>    
+                <div class="promo__header_title promo__header_title_width_lk">
+                    <h1 style="color: aliceblue;">Добро пожаловать, <br>Гарфиев Инсаф</h1>
+                </div>  
             </div>
         </div>
     </section>
 
-    <div class="files">
+    <section class="promo__button">
         <div class="container">
-            <h2 class="files__header">Благотворительная программа по работникам АО СК</h2>
-            <div class="files__wrap"> 
-                <a class="files__wrap_link" href="files/employes/Презентация_Благпрограмма_по_работникам_СК_2024.pdf" target="_blank"><i class="fa-solid fa-download"></i></a>
-            </div>
-            <h2 class="files__header">Утвержденный бланк программы с приложением. Помощь в трудный час</h2>
-            <div class="files__wrap"> 
-                <a class="files__wrap_link" href="files/employes/0 Утв. Бл. Прог. с прилож. Помощь в трудный час - с 20.05.2024.pdf" target="_blank"><i class="fa-solid fa-download"></i></a>
-            </div>
-            <h2 class="files__header">Памятка по документам по БФ на благотворительую помощь работнику</h2>
-            <div class="files__wrap">
-                <a href="files/employes/2.6. ПАМЯТКА  по докум. в БФ на благ.пом. РАБОТНИКУ .docx" class="files__wrap_link" target="_blank"><div class="files__wrap_link_text">Работнику</div><i class="fa-solid fa-download"></i></a>
-                <a href="files/employes/2.7. ПАМЯТКА  по докум. в БФ на благ.помощь РАБОТНИКУ  на РЕБЕНКА (ВНУКА).docx" class="files__wrap_link" target="_blank"><div class="files__wrap_link_text">Работнику на ребенка</div><i class="fa-solid fa-download"></i></a>
-            </div>
-            <h2 class="files__header">Бланк заявления на благотворительную помощь от Работника АО СК</h2>
-            <div class="files__wrap">
-                <a href="files/employes/2.1. БЛАНК Заявл. на благ.помощь от РАБОТНИКА АО СК - 2024.docx" class="files__wrap_link" target="_blank"><div class="files__wrap_link_text">Работнику</div><i class="fa-solid fa-download"></i></a>
-                <a href="files/employes/2.2  БЛАНК Заявл. на благ.пом. от РАБОТНИКА АО СК (на РЕБЕНКА) - 2024.docx" class="files__wrap_link" target="_blank"><div class="files__wrap_link_text">Работнику на ребенка</div><i class="fa-solid fa-download"></i></a>
+            <div class="promo__button_wrap promo__button_wrap_lk">
+                <button class="button raise button__active" onclick="">Мои заявки</button> 
+                <button class="button raise" onclick="">Создать заявку</button>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="application">
+        <div class="container">
+            <div class="application__content">
+                <!-- Блок списка заявок -->
+                <div class="application__list active">
+                    <h2>Мои заявки</h2>
+                    <div class="application__list_wrapper">
+                        <!-- Пример карточки заявки -->
+                        <div class="application-card">
+                            <h3>Заявка #123</h3>
+                            <p>Статус: В обработке</p>
+                            <p>Дата создания: 01.01.2024</p>
+                        </div>
+                        <div class="application-card">
+                            <h3>Заявка #124</h3>
+                            <p>Статус: Одобрена</p>
+                            <p>Дата создания: 02.01.2024</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Блок создания заявки -->
+                <div class="application__form">
+                    <h2>Создать новую заявку</h2>
+                    <form class="application-form">
+                        <div class="form-group">
+                            <label>Тип заявки</label>
+                            <select class="form-control">
+                                <option>Материальная помощь</option>
+                                <option>Юридическая консультация</option>
+                                <option>Медицинская помощь</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Описание ситуации</label>
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                        <button class="button raise" type="submit">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.promo__button_wrap_lk .button');
+            const applicationList = document.querySelector('.application__list');
+            const applicationForm = document.querySelector('.application__form');
+
+            function switchTab(targetTab) {
+                tabs.forEach(tab => tab.classList.remove('button__active'));
+                targetTab.classList.add('button__active');
+                
+                if(targetTab.textContent.includes('Мои заявки')) {
+                    applicationForm.classList.remove('active');
+                    applicationList.classList.add('active');
+                } else {
+                    applicationList.classList.remove('active');
+                    applicationForm.classList.add('active');
+                }
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    switchTab(this);
+                });
+            });
+        });
+    </script>
+
+    
+
 
     <footer>
         <div class="container">
